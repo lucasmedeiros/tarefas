@@ -85,7 +85,7 @@ const handleInfoHTML = () => {
 
   body += `
     </ul></div>
-    <p class="assignee">Responsável: ${day['assignTo']}</p>
+    <div class="assignee"><p>Responsável: ${day['assignTo']}</p></div>
   `
 
   titleWidget.innerHTML = `${nextDate}`;

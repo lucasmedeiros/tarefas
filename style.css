@@ -15,10 +15,9 @@ html, body, .container {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .container section {
@@ -28,6 +27,7 @@ html, body, .container {
   flex-direction: column;
   background-color: #222;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
 }
 
 .title {
@@ -69,24 +69,32 @@ html, body, .container {
 }
 
 #info ul li {
-  background-color: #aaa;
+  background-color: #ccc;
   padding: 10px;
   width: 250px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #444;
 }
 
 .assignee {
   color: #ccc;
   text-align: left;
+  margin-top: 30px;
 }
 
 @media (max-width: 770px) {
+  .container {
+    padding-top: 0;
+  }
+
   .container section {
-    width: 90vw;
-    height: 90vh;
+    width: 100vw;
+    min-height: 100vh;
   }
 
   #info ul {
