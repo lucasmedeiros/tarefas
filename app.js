@@ -88,7 +88,7 @@ const handleInfoHTML = () => {
     <p class="assignee">Responsável: ${day['assignTo']}</p>
   `
 
-  titleWidget.innerHTML = `${todayDate}`;
+  titleWidget.innerHTML = `${nextDate}`;
 
   infoWidget.innerHTML = body;
 }

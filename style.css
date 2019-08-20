@@ -23,7 +23,7 @@ html, body, .container {
 
 .container section {
   width: 50vw;
-  height: 70vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   background-color: #222;
