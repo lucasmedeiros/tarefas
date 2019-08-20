@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #141414;
+}
+
+html, body, .container {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container section {
+  width: 50vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  padding: 1rem;
+  background-color: #fff;
+  color: #333;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#info {
+  font-size: 1.2em;
+  margin: 40px;
+  color: #222;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spacer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#info ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 50px 20px;
+  text-align: center;
+}
+
+#info ul li {
+  background-color: #aaa;
+  padding: 10px;
+  width: 250px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.assignee {
+  color: #ccc;
+  text-align: left;
+}
+
+@media (max-width: 770px) {
+  .container section {
+    width: 90vw;
+    height: 90vh;
+  }
+
+  #info ul {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
