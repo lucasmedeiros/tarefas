@@ -68,6 +68,9 @@ const handleInfoHTML = () => {
       case 2:
         nextDate = getFormattedDate(nextDayOfWeek(3));
         break;
+      default:
+        nextDate = getFormattedDate(nextDayOfWeek(6));
+        break;
     }
 
     day = _days[nextDate];
