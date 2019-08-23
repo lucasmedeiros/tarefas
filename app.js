@@ -29,6 +29,16 @@ const getDays = async () => {
   _days = days;
 };
 
+const convertIntegerValuesToString = (...intValues) => {
+  let convertedValues = [];
+
+  intValues.forEach((value, index) => {
+    convertedValues[index] = (value < 10) ? `0${value}` : `${value}`;
+  });
+
+  return convertedValues;
+};
+
 const getFormattedDate = (date) => {
   const today = (date) ? new Date(date) : new Date();
   const yyyy = today.getFullYear();
@@ -36,8 +46,7 @@ const getFormattedDate = (date) => {
   let dd = today.getDate();
   let mm = today.getMonth() + 1;
 
-  (dd < 10) && (dd = '0' + dd);
-  (mm < 10) && (mm = '0' + mm);
+  [dd, mm] = convertIntegerValuesToString(dd, mm);
 
   return `${dd}/${mm}/${yyyy}`;
 };
